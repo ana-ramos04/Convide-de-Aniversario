@@ -15,7 +15,7 @@
     padding: .25rem;
 }
 
-label+.radio-wrapper {
+legend+.radio-wrapper {
     margin-top: .75rem;
 }
 
@@ -30,6 +30,7 @@ label+.radio-wrapper {
     padding: 10.5px 18px;
     position: relative;
     cursor: pointer;
+    transition: .3s;
 
     & input,
     & input:focus,
@@ -39,8 +40,11 @@ label+.radio-wrapper {
         inset: 0;
     }
 
-    & svg,
-    & svg path {
+    label {
+        font: var(--body-sm-regular);
+    }
+
+    & svg {
         stroke: var(--input-placeholder);
         width: 1rem;
         height: 1rem;
@@ -51,6 +55,11 @@ label+.radio-wrapper {
 
         & svg path {
             stroke: var(--brand-light);
+        }
+
+        label {
+            color: var(--text-heading);
+            font: var(--body-sm);
         }
     }
 }
