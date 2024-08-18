@@ -14,6 +14,7 @@
 
     --font-family-body: 'Open Sans', sans-serif;
     --body-md: 600 1rem var(--font-family-body);
+    --body-sm-regular: 500 .875rem var(--font-family-body);
     --body-sm: 600 .875rem var(--font-family-body);
     --body-xs: 600 .75rem var(--font-family-body);
 
