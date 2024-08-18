@@ -1,0 +1,13 @@
+@import url(fields/index.css);
+
+form {
+    margin-top: 2.5rem;
+    padding-inline: 7.5rem;
+}
+
+fieldset {
+    display: grid;
+    border: none;
+    gap: 1rem;
+    padding-bottom: 3rem;
+}
