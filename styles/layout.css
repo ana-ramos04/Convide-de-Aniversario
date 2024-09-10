@@ -1,9 +1,9 @@
 #invitation-grid {
     display: grid;
-    grid-template-columns: 32.79% 67.21%;
+    grid-template-columns: 400px auto;
     height: 100%;
     gap: 1.25rem;
-    width: calc(100% - 1rem);
+    width: calc(100% - 1.25rem);
 }
 
 .container {
@@ -43,6 +43,8 @@
     flex-direction: column;
     justify-content: left;
 
+    padding-inline: 8.125rem;
+
     & .info img {
         width: 1.5rem;
     }
@@ -50,7 +52,6 @@
     & .criation {
         color: var(--text-heading);
         font: var(--text-md);
-        margin-inline: 7.5rem;
         margin-top: 5rem;
     }
 }

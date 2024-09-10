@@ -4,15 +4,8 @@
     color: var(--text-heading);
 
     label+div {
-        padding-top: 16px;
         font: var(--body-sm);
         color: #FFFFFF;
-    }
-
-    & input {
-        all: unset;
-        position: absolute;
-        inset: 0;
     }
 }
 
@@ -23,6 +16,12 @@
     gap: .75rem;
     justify-items: center;
     position: relative;
+
+    & input {
+        all: unset;
+        position: absolute;
+        inset: 0;
+    }
 }
 
 .circle-color {
@@ -92,6 +91,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(8.375rem, 1fr));
     gap: 8px;
+    padding-bottom: 28px;
 }
 
 .image-wrapper {
@@ -100,6 +100,15 @@
     border-radius: 8px;
     background-color: var(--shape-button);
     position: relative;
+
+    font: var(--text-heading);
+    color: var(--body-sm-regular);
+
+    & input {
+        all: unset;
+        position: absolute;
+        inset: 0;
+    }
 
     &:hover,
     &:focus {
