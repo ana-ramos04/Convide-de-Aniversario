@@ -2,7 +2,6 @@
 
 form {
     margin-top: 2.5rem;
-    padding-inline: 7.5rem;
 }
 
 fieldset {
@@ -10,4 +9,12 @@ fieldset {
     border: none;
     gap: 1rem;
     padding-bottom: 3rem;
+}
+
+legend {
+    font: var(--text-heading);
+}
+
+footer {
+    margin-bottom: 48px;
 }
