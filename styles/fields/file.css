@@ -1,0 +1,45 @@
+.input-file-wrapper {
+    border-radius: 4px;
+    position: relative;
+    display: inline-block;
+    min-width: 320px;
+    width: 100%;
+    padding: 2px;
+}
+
+.input-file-button {
+    color: var(--text-heading);
+    font: var(--body-sm);
+    width: 7.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    /* padding-block: 4px;
+    padding-inline: 12px; */
+    border-radius: 4px;
+}
+
+#input-file {
+    all: unset;
+    position: absolute;
+    inset: 0;
+    padding-left: 136px;
+    padding-top: 8px;
+    cursor: pointer;
+    color: var(--input-placeholder);
+}
+
+#input-file::file-selector-button {
+    display: none;
+}
+
+.btn-secondary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--shape-button);
+    padding: 8px 12px;
+}

@@ -40,10 +40,6 @@ legend+.radio-wrapper {
         inset: 0;
     }
 
-    label {
-        font: var(--body-sm-regular);
-    }
-
     & svg {
         stroke: var(--input-placeholder);
         width: 1rem;
@@ -59,7 +55,7 @@ legend+.radio-wrapper {
 
         label {
             color: var(--text-heading);
-            font: var(--body-sm);
+            font: var(--body-sm-regular);
         }
     }
 }

@@ -1,0 +1,103 @@
+input[type="checkbox"] {
+    appearance: checkbox;
+    padding: 0;
+    margin: 0;
+
+    &:focus-within,
+    &:hover {
+        border: none;
+    }
+}
+
+.style-checked {
+    position: relative;
+    width: 64px;
+    height: 32px;
+    border-radius: 999px;
+    outline: 1px solid var(--input-stroke);
+    background-color: var(--input-base);
+    transition: .4s;
+
+    input {
+        appearance: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 24px;
+        height: 24px;
+        margin: 4px;
+        border-radius: 100%;
+        background-color: var(--input-stroke);
+        transition: .4s;
+    }
+
+
+    input:checked {
+        background-color: var(--text-heading);
+        outline: 1px solid var(--text-heading);
+        margin-left: 36px;
+
+    }
+
+    &:has(input:checked) {
+        background-color: var(--brand-light);
+    }
+}
+
+#style {
+    min-width: 176px;
+    
+    #text-theme {
+        color: var(--text-heading);
+        font: var(--body-sm-regular);
+    }
+
+    &:not(:checked) #text-theme {
+        &::before {
+            content: "Escuro";
+        }
+    }
+
+    &:has(:checked) #text-theme {
+        &::before {
+            content: "Claro";
+        }
+    }
+}
+
+.terms-wrapper {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 4px;
+
+    font: var(--body-sm-regular);
+    color: var(--text-body);
+
+    & strong {
+        font-weight: 600;
+        color: var(--brand-light);
+        text-decoration: underline;
+    }
+}
+
+.checkbox-wrapper {
+    position: relative;
+
+    & [type="checkbox"] {
+        all: unset;
+        position: absolute;
+        inset: 0;
+    }
+
+    .checkbox-image {
+        flex: 0 0 1.25rem;
+        height: 1.25rem;
+
+        background-image: url(../../assets/icons/checkbox-default.svg);
+    }
+
+    &:has(:checked) .checkbox-image {
+        background-image: url(../../assets/icons/checkbox-checked.svg);
+    }
+}
