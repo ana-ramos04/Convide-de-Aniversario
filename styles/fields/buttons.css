@@ -1,0 +1,32 @@
+button {
+    all: unset;
+    padding: 12px 20px;
+    color: var(--text-heading);
+    font: var(--body-md);
+    border-radius: 8px;
+    cursor: pointer;
+
+    & img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.button-wrapper {
+    margin-top: 48px;
+    display: flex;
+    justify-content: end;
+}
+
+.btn-primary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--brand-dark);
+
+    &:hover,
+    &:focus {
+        background-color: var(--brand-mid);
+    }
+}
