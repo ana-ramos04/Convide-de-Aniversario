@@ -2,6 +2,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: var(--shape-background);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--shape-body);
+        border-radius: 10px;
+        border: 5px solid var(--input-base);
+    }
 }
 
 :root {
@@ -14,12 +28,13 @@
 
     --font-family-body: 'Open Sans', sans-serif;
     --body-md: 600 1rem var(--font-family-body);
-    --body-sm-regular: 500 .875rem var(--font-family-body);
+    --body-sm-regular: 400 .875rem var(--font-family-body);
     --body-sm: 600 .875rem var(--font-family-body);
     --body-xs: 600 .75rem var(--font-family-body);
 
     --text-body: #C8CDD0;
     --text-heading: #F9F9F9;
+    --text-pink: #FF598B;
 
     --input-base: #1C1F21;
     --input-stroke: #363B40;
@@ -30,17 +45,19 @@
     --shape-button: #2D3136;
     --shape-hover: #383D42;
 
-    --text-pink: #FF598B;
-    --brand-light: #59B2FF;
     --danger: #FF5959;
 
+    --brand-light: #59B2FF;
+    --brand-mid: #3487CF;
+    --brand-dark: #1D6FB6;
 }
 
 body {
     overflow: hidden;
     height: 100vh;
     background: var(--shape-background);
-    padding: 1.25rem;
+    padding-block: 1.25rem;
+    padding-inline-start: 1.25rem;
 }
 
 h1 {
@@ -55,8 +72,18 @@ p {
 
 main {
     background-color: var(--shape-body);
-    overflow: auto;
     border-radius: .75rem;
+    overflow: auto;
+
+    img {
+        object-fit: cover;
+        border-radius: 4px;
+    }
+}
+
+hr {
+    border: 1px solid var(--input-stroke);
+    margin-bottom: 40px;
 }
 
 .flex {
@@ -69,4 +96,13 @@ main {
 
 .gap-1 {
     gap: 1rem;
+}
+
+.pd-y-1 {
+    padding-block: 8px;
+}
+
+label {
+    font: var(--body-sm-regular);
+    color: var(--text-body);
 }
