@@ -34,13 +34,14 @@
 
         <main>
             <div class="main-container">
+
                 <div class="criation">
                     <h2>
                         Crie seu convite
                     </h2>
                 </div>
 
-                <form>
+                <form method="post" enctype="multipart/form-data" autocomplete="off">
                     <fieldset>
                         <div class="info">
                             <img src="assets/icons/calendar.svg" alt="">
@@ -55,7 +56,8 @@
                         <div class="flex gap-1">
                             <div class="flex-1">
                                 <label for="start">Início</label>
-                                <input type="datetime-local" id="start" name="start" lang="pt-BR">
+                                <input type="datetime-local" id="start" name="start" lang="pt-BR"
+                                    placeholder="DD/MM/AAAA, --:--">
                             </div>
 
                             <div class="flex-1">
@@ -67,7 +69,7 @@
 
                         <div id="section-input" class="flex">
                             <div class="flex-1">
-                                <legend>Tipo</legend>
+                                <label class="input-label-sm" for="person">Tipo</label>
 
                                 <div class="flex radio-wrapper">
                                     <div class="flex-1 radio-inner">
@@ -106,14 +108,14 @@
                         </div>
                     </fieldset>
 
-                    <fieldset class="event">
+                    <fieldset>
                         <div class="info">
                             <img src="assets/icons/paintbrush-vertical.svg" alt="">
                             <legend>Personalização</legend>
                         </div>
 
                         <div>
-                            <label for="color">Cor principal</label>
+                            <label class="input-label" for="color">Cor principal</label>
 
                             <div class="container-circle-inline">
 
@@ -164,7 +166,7 @@
                         </div>
 
                         <div>
-                            <legend>Tema do evento</legend>
+                            <label for="birth">Tema do evento</label>
                         </div>
 
                         <div class="event-theme">
@@ -264,8 +266,96 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="flex gap-1">
+                            <div id="style">
+                                <label class="input-label-sm" for="inp-theme">Estilo</label>
+                                <div class="info pd-y-1">
+                                    <div class="style-checked">
+                                        <input id="inp-theme" name="inp-theme" type="checkbox">
+                                    </div>
+                                    <span id="text-theme"></span>
+                                </div>
+                            </div>
+
+                            <div class="flex-1">
+                                <label class="input-label" for="input-file">Foto de capa</label>
+                                <div class="input-file-wrapper">
+                                    <div class="input-file-button btn-secondary">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M7.64645 1.64645C7.84171 1.45118 8.15829 1.45118 8.35355 1.64645L11.6869 4.97978C11.8821 5.17504 11.8821 5.49162 11.6869 5.68689C11.4916 5.88215 11.175 5.88215 10.9798 5.68689L8.5 3.20711V10C8.5 10.2761 8.27614 10.5 8 10.5C7.72386 10.5 7.5 10.2761 7.5 10V3.20711L5.02022 5.68689C4.82496 5.88215 4.50838 5.88215 4.31311 5.68689C4.11785 5.49162 4.11785 5.17504 4.31311 4.97978L7.64645 1.64645ZM2 9.5C2.27614 9.5 2.5 9.72386 2.5 10V12.6667C2.5 12.8877 2.5878 13.0996 2.74408 13.2559C2.90036 13.4122 3.11232 13.5 3.33333 13.5H12.6667C12.8877 13.5 13.0996 13.4122 13.2559 13.2559C13.4122 13.0996 13.5 12.8877 13.5 12.6667V10C13.5 9.72386 13.7239 9.5 14 9.5C14.2761 9.5 14.5 9.72386 14.5 10V12.6667C14.5 13.1529 14.3068 13.6192 13.963 13.963C13.6192 14.3068 13.1529 14.5 12.6667 14.5H3.33333C2.8471 14.5 2.38079 14.3068 2.03697 13.963C1.69315 13.6192 1.5 13.1529 1.5 12.6667V10C1.5 9.72386 1.72386 9.5 2 9.5Z"
+                                                fill="#59B2FF" />
+                                        </svg>
+                                        Selecionar
+                                    </div>
+                                    <input type="file" id="input-file" name="selection">
+                                </div>
+                            </div>
+                        </div>
+
                     </fieldset>
+
+                    <fieldset>
+                        <div class="info">
+                            <img src="assets/icons/contact.svg" alt="">
+                            <legend>Dados para contato</legend>
+                        </div>
+
+                        <div>
+                            <label for="ful-name">Nome</label>
+                            <input type="text" name="name" id="ful-name" placeholder="Nome completo" autocomplete="off" required>
+
+                            <div class="error pd-y-1">
+                                <img src="assets/icons/circle-alert.svg" alt="">
+                                <span>Campo obrigatório</span>
+                            </div>
+                        </div>
+
+                        <div id="section-input" class="flex">
+                            <div class="flex-1">
+                                <label for="mail">E-mail</label>
+                                <input type="email" name="email" id="mail" placeholder="exemplo@email.com" autocomplete="off">
+                            </div>
+                            <div class="flex-1">
+                                <label for="tell">Telefone</label>
+                                <input type="tel" name="phone" id="tell" placeholder="(99) 99999-9999" autocomplete="off">
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <footer>
+                        <hr>
+
+                        <div class="terms-wrapper checkbox-wrapper">
+                            <div class="checkbox-image"></div>
+                            <input type="checkbox" name="accepted" id="terms">
+                            <label for="terms">Li e concordo com os <strong>Termos e Condições</strong> e com a
+                                <strong>Política de Privacidade</strong></label>
+                        </div>
+
+                        <div class="terms-wrapper checkbox-wrapper">
+                            <div class="checkbox-image"></div>
+                            <input type="checkbox" name="accepted" id="receive-mail">
+                            <label for="receive-mail">Aceito receber atualizações e promoções por e-mail</label>
+                        </div>
+
+                        <div class="terms-wrapper checkbox-wrapper">
+                            <div class="checkbox-image"></div>
+                            <input type="checkbox" name="accepted" id="receive-sms">
+                            <label for="receive-sms">Aceito receber atualizações e promoções por SMS</label>
+                        </div>
+
+                        <div class="button-wrapper">
+                            <button type="submit" class="btn-primary">
+                                <img src="assets/icons/ticket.svg" alt="">
+                                Gerar convite
+                            </button>
+                        </div>
+                    </footer>
                 </form>
+
             </div>
         </main>
     </div>
